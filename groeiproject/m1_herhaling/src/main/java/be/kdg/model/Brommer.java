@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Brommer implements Comparable<Brommer> {
+    // Properties
     private String model;
 
     private String chassisNummer;
@@ -127,6 +128,12 @@ public class Brommer implements Comparable<Brommer> {
 
     @Override
     public int compareTo(Brommer o) {
-        return 0;
+        // Vergelijk chassisnummer alfabetisch
+        return this.getChassisNummer().compareTo(o.getChassisNummer());
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s (%s) %skg , aantal keer onderhoud: %s , klasse: %s %s, Laatste onderhoud: %s", this.getModel(), this.getChassisNummer(), this.getGewicht(), this.getAantalKeerOnderhoud(), this.getKlasse(), this.getRelaseDate(), this.getLaatsteOnderhoud());
     }
 }
