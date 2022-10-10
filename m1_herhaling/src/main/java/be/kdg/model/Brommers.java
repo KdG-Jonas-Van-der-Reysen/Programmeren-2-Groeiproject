@@ -1,10 +1,12 @@
 package be.kdg.model;
 
-import java.util.Comparator;
-import java.util.TreeSet;
-
+import java.util.*;
 public class Brommers {
     private TreeSet<Brommer> brommers;
+
+    public Brommers() {
+        this.brommers = new TreeSet<>();
+    }
 
     private class GewichtComparator implements Comparator<Brommer> {
         @Override
@@ -46,7 +48,36 @@ public class Brommers {
         return null;
     }
 
+    // Sorted on gewicht
+    public List<Brommer> sortedOnGewicht() {
+        // Convert to linkedlist
+        List<Brommer> brommers = new LinkedList<>(this.brommers);
+        Collections.sort(brommers, new GewichtComparator());
+        return brommers;
+    }
+
+    // Sorted on laatste onderhoud
+    public List<Brommer> sortedOnLaatsteOnderhoud() {
+        // Convert to linkedlist
+        List<Brommer> brommers = new LinkedList<>(this.brommers);
+        Collections.sort(brommers, new LaatsteOnderhoudComparator());
+        return brommers;
+    }
+
+    // Sorted on release date
+    public List<Brommer> sortedOnReleaseDate() {
+        // Convert to linkedlist
+        List<Brommer> brommers = new LinkedList<>(this.brommers);
+        Collections.sort(brommers, new ReleaseDateComparator());
+        return brommers;
+    }
+
     public int getSize() {
         return brommers.size();
+    }
+
+    // Function to return the treeset
+    public TreeSet<Brommer> getBrommers() {
+        return brommers;
     }
 }
