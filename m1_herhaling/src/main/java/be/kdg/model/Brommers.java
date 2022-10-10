@@ -25,7 +25,7 @@ public class Brommers {
     private class ReleaseDateComparator implements Comparator<Brommer> {
         @Override
         public int compare(Brommer b1, Brommer b2) {
-            return b1.getRelaseDate().compareTo(b2.getRelaseDate());
+            return b1.getReleaseDate().compareTo(b2.getReleaseDate());
         }
     }
 
@@ -35,7 +35,17 @@ public class Brommers {
 
     // Remove
     public boolean remove(Brommer brommer) {
-        return brommers.remove(brommer);
+        // Remove using iterator
+        Iterator<Brommer> iterator = brommers.iterator();
+        while (iterator.hasNext()) {
+            Brommer b = iterator.next();
+            if (b.equals(brommer)) {
+                iterator.remove();
+                return true;
+            }
+        }
+
+        return false;
     }
 
     // Search (op chassisnummer)
