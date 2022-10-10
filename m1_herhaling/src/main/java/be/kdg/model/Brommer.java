@@ -135,6 +135,6 @@ public class Brommer implements Comparable<Brommer> {
     @Override
     public String toString() {
         // Format with fixed width
-        return String.format("%30s (%s)\t %skg \taantal keer onderhoud: %s , klasse: %s %s, Laatste onderhoud: %s", this.getModel(), this.getChassisNummer(), this.getGewicht(), this.getAantalKeerOnderhoud(), this.getKlasse(), this.getRelaseDate(), this.getLaatsteOnderhoud());
+        return String.format("%-30s (%-15s) %.2fkg \taantal keer onderhoud: %s , klasse: %s %s, Laatste onderhoud: %s", this.getModel(), this.getChassisNummer(), this.getGewicht(), this.getAantalKeerOnderhoud(), this.getKlasse(), this.getRelaseDate(), this.getLaatsteOnderhoud());
     }
 }
