@@ -31,25 +31,28 @@ public class PriorityQueue<T> implements FIFOQueue<T>{
 
     @Override
     public T dequeue() {
-        // Get the highest priority
         int highestPriority = queue.firstKey();
+        List<T> list = queue.get(highestPriority);
 
-        // Get the list object from the priority entry
-        LinkedList<T> list = queue.get(highestPriority);
-
-        // Check if the list is null or empty
+        // Check if the list is null or empty (in that case the queue is empty)
         if (list == null || list.isEmpty()) {
             // List is null or empty, so return null
+            queue.remove(highestPriority);
             return null;
         }
 
         // Get the first element from the list
-        T element = list.getFirst();
+        T element = list.get(0);
 
         // Check if the element is not null
         if (element != null) {
             // Element is not null, so remove it from the list
             queue.firstEntry().getValue().removeFirst();
+
+            // If the list is now empty, remove the entry from the queue
+            if (queue.firstEntry().getValue().isEmpty()) {
+                queue.remove(queue.firstEntry().getKey());
+            }
             return element;
         } else {
             return null;

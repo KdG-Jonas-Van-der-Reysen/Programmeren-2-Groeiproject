@@ -1,5 +1,6 @@
 package be.kdg.data;
 
+import be.kdg.generics.PriorityQueue;
 import be.kdg.model.Brommer;
 import be.kdg.model.BrommerKlasse;
 
@@ -29,5 +30,10 @@ public class Data {
         brommers.add(new Brommer("Piaggio Liberty 50 S", "1FAFP25195G101531", 2858, 1, BrommerKlasse.B, LocalDate.of(2007, 1, 16), LocalDate.of(1987, 8, 25)));
 
         return brommers;
+    }
+
+    public static int generateRandom(int min, int max) {
+        // Min inclusive, max exclusive
+        return (int) (Math.random() * (max - min)) + min;
     }
 }
