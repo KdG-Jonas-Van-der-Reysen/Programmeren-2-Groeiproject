@@ -85,10 +85,9 @@ public class ReflectionTools {
         Object object = aClass.getDeclaredConstructor().newInstance();
         // Loop over all methods in the class and check if they are annotated with @CanRun
         for (Method m : aClass.getMethods()) {
-            System.out.println("m.getAnnotations() = " + m.getAnnotations());
             if (m.isAnnotationPresent(CanRun.class)) {
                 CanRun canRun = m.getAnnotation(CanRun.class);
-                m.invoke(canRun.value());
+                m.invoke(object, canRun.value());
             }
         }
 
