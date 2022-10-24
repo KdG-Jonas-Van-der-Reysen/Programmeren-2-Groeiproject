@@ -2,16 +2,13 @@ import be.kdg.data.Data;
 import be.kdg.model.*;
 import be.kdg.util.BrommerFunctions;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Demo_4 {
     private static void printBrommers(List<Brommer> brommers) {
-        for (var brommer : brommers) {
-            System.out.println(brommer);
-        }
+        brommers.stream()
+                .forEach(System.out::println);
     }
     public static void main(String[] args) {
         // Instance of multi class
@@ -22,9 +19,8 @@ public class Demo_4 {
         System.out.println("Brommers: " + brommerList);
 
         // Add brommers to brommers class
-        for (Brommer brommer : brommerList) {
-            brommers.add(brommer);
-        }
+        brommerList.stream()
+                .forEach(b -> brommers.add(b));
 
         // Print brommers
         System.out.println("\nNiet gesorteerd\n=============================================");
@@ -120,7 +116,53 @@ public class Demo_4 {
         System.out.println("\n\nZwaarste brommer:");
         System.out.println(zwaarsteBrommer);
 
+        // Kampioen in slecht onderhouden
+        Brommer bestOnderhoudenBrommer = strBrommers.stream()
+                .max(Comparator.comparing(Brommer::getAantalKeerOnderhoud))
+                .get();
+
+        System.out.println("\n\nBest onderhouden brommer:");
+        System.out.println(bestOnderhoudenBrommer);
+
+        // Filter op een string criterium, map elk element op een string (bijvoorbeeld op naam),
+        // sorteer alfabetisch en collect als een list van string
+        System.out.println("\n\nLijst met gesorteerde brommers van Segway: ");
+        List<String> segwayBrommers = strBrommers.stream()
+                .filter(brommer -> brommer.getModel().toLowerCase().contains("segway"))
+                .map(brommer -> brommer.getModel())
+                .sorted()
+                .collect(Collectors.toList());
+
+        System.out.printf("[%s]", String.join(", ",segwayBrommers));
 
 
+        // Gepartitioneerd
+        Map<Boolean, List<Brommer>> gepartitioneerdeBrommers = strBrommers.stream()
+                .sorted(Comparator.comparing(Brommer::getLaatsteOnderhoud))
+                .collect(Collectors.partitioningBy(a -> a.getLaatsteOnderhoud().getYear() >= 2000));
+
+        System.out.println("\n\nSublist met brommers die laatst onderhouden werden VOOR 2000: ");
+        printBrommers(gepartitioneerdeBrommers.get(false));
+        System.out.println("\n\nSublist met brommers die laatst onderhouden werden IN of NA 2000: ");
+        printBrommers(gepartitioneerdeBrommers.get(true));
+        
+        
+        // Gegroepeerd
+        System.out.println("\n\nAlle brommers per klasse (A/B)");
+        Map<BrommerKlasse, List<Brommer>> gegroepeerdeBrommers = new TreeMap(
+                strBrommers.stream()
+                        .sorted(Comparator.comparing(Brommer::getModel))
+                        .collect(Collectors.groupingBy(Brommer::getKlasse))
+        );
+
+        gegroepeerdeBrommers.keySet().stream()
+            .forEach(key -> {
+                System.out.printf("%s: ",key);
+                var groupedModelNames = gegroepeerdeBrommers.get(key).stream()
+                        .map(Brommer::getModel)
+                        .collect(Collectors.toList());
+                System.out.print(String.join(", ", groupedModelNames));
+                System.out.println();
+            });
     }
 }

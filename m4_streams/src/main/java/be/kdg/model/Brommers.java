@@ -37,27 +37,15 @@ public class Brommers {
 
     // Remove
     public boolean remove(Brommer brommer) {
-        // Remove using iterator
-        Iterator<Brommer> iterator = brommers.iterator();
-        while (iterator.hasNext()) {
-            Brommer b = iterator.next();
-            if (b.equals(brommer)) {
-                iterator.remove();
-                return true;
-            }
-        }
-
-        return false;
+        return brommers.removeIf(b -> b.equals(brommer));
     }
 
     // Search (op chassisnummer)
     public Brommer search(String chassisNummer) {
-        for (Brommer brommer : brommers) {
-            if (brommer.getChassisNummer().equals(chassisNummer)) {
-                return brommer;
-            }
-        }
-        return null;
+        return brommers.stream()
+                .filter(b -> b.getChassisNummer().equals(chassisNummer))
+                .findFirst()
+                .orElse(null);
     }
 
     public List<Brommer> sortedBy(Function<Brommer, Comparable> function) {
