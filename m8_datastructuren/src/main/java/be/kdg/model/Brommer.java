@@ -11,7 +11,7 @@ public class Brommer implements Comparable<Brommer> {
     private double gewicht;
     private int aantalKeerOnderhoud;
     private BrommerKlasse klasse;
-    private LocalDate releaseDate;
+    private LocalDate relaseDate;
     private LocalDate laatsteOnderhoud;
 
     public String getModel() {
@@ -74,18 +74,16 @@ public class Brommer implements Comparable<Brommer> {
         this.klasse = klasse;
     }
 
-
-
     public LocalDate getReleaseDate() {
-        return releaseDate;
+        return relaseDate;
     }
 
-    public void setReleaseDate(LocalDate releaseDate) {
+    public void setRelaseDate(LocalDate relaseDate) {
         // Relase date mag niet null zijn en niet in de toekomst liggen
-        if(releaseDate == null || releaseDate.isAfter(LocalDate.now())) {
+        if(relaseDate == null || relaseDate.isAfter(LocalDate.now())) {
             throw new IllegalArgumentException("Relase date mag niet null zijn en niet in de toekomst liggen");
         }
-        this.releaseDate = releaseDate;
+        this.relaseDate = relaseDate;
     }
 
     public LocalDate getLaatsteOnderhoud() {
@@ -106,7 +104,7 @@ public class Brommer implements Comparable<Brommer> {
         this.setGewicht(gewicht);
         this.setAantalKeerOnderhoud(aantalKeerOnderhoud);
         this.setKlasse(klasse);
-        this.setReleaseDate(releaseDate);
+        this.setRelaseDate(releaseDate);
         this.setLaatsteOnderhoud(laatsteOnderhoud);
     }
 
@@ -137,7 +135,6 @@ public class Brommer implements Comparable<Brommer> {
     @Override
     public String toString() {
         // Format with fixed width
-        return String.format("%-26s (%s) %.2fkg \taantal keer onderhoud: %s , klasse: %s, Laatste onderhoud: %s, Release date: %s", this.getModel(), this.getChassisNummer(), this.getGewicht(), this.getAantalKeerOnderhoud(), this.getKlasse(), this.getLaatsteOnderhoud(), this.getReleaseDate());
+        return String.format("%-26s (%s) %.2fkg \taantal keer onderhoud: %s , klasse: %s %s, Laatste onderhoud: %s, Release date: %s", this.getModel(), this.getChassisNummer(), this.getGewicht(), this.getAantalKeerOnderhoud(), this.getKlasse(), this.getReleaseDate(), this.getLaatsteOnderhoud(), this.getReleaseDate());
     }
-
 }

@@ -2,8 +2,13 @@ package be.kdg.model;
 
 import java.time.LocalDate;
 import java.util.Objects;
+import java.util.logging.Logger;
 
 public class Brommer implements Comparable<Brommer> {
+
+    // Logger
+    private static final Logger logger = Logger.getLogger("be.kdg.model.Brommer");
+
     // Properties
     private String model;
 
@@ -11,7 +16,7 @@ public class Brommer implements Comparable<Brommer> {
     private double gewicht;
     private int aantalKeerOnderhoud;
     private BrommerKlasse klasse;
-    private LocalDate releaseDate;
+    private LocalDate relaseDate;
     private LocalDate laatsteOnderhoud;
 
     public String getModel() {
@@ -20,7 +25,8 @@ public class Brommer implements Comparable<Brommer> {
 
     public void setModel(String model) {
         if(model.isBlank() || model.isEmpty()) {
-            throw new IllegalArgumentException("Model mag niet leeg zijn");
+            // Kan nog geen naam meegeven hier
+            logger.severe("Model (" + model + ") is niet geldig, het mag niet leeg zijn.");
         }
         this.model = model;
     }
@@ -32,7 +38,7 @@ public class Brommer implements Comparable<Brommer> {
     public void setChassisNummer(String chassisNummer) {
         // Chassisnummer mag niet leeg zijn
         if(chassisNummer.isBlank() || chassisNummer.isEmpty()) {
-            throw new IllegalArgumentException("Chassisnummer mag niet leeg zijn");
+            logger.severe("Chassisnummer (" + chassisNummer + ") mag niet leeg zijn voor brommer " + model);
         }
 
         this.chassisNummer = chassisNummer;
@@ -45,7 +51,7 @@ public class Brommer implements Comparable<Brommer> {
     public void setGewicht(double gewicht) {
         // Gewicht mag niet negatief of 0 zijn
         if(gewicht <= 0) {
-            throw new IllegalArgumentException("Gewicht mag niet negatief of 0 zijn");
+            logger.severe("Gewicht (" + gewicht + ") mag niet negatief of 0 zijn voor brommer " + model);
         }
         this.gewicht = gewicht;
     }
@@ -57,7 +63,8 @@ public class Brommer implements Comparable<Brommer> {
     public void setAantalKeerOnderhoud(int aantalKeerOnderhoud) {
         // Aantal keer onderhoud mag niet negatief zijn
         if(aantalKeerOnderhoud < 0) {
-            throw new IllegalArgumentException("Aantal keer onderhoud mag niet negatief zijn");
+            logger.severe("Aantal keer onderhoud (" + aantalKeerOnderhoud + ") mag niet negatief zijn voor brommer " + model);
+
         }
         this.aantalKeerOnderhoud = aantalKeerOnderhoud;
     }
@@ -69,23 +76,21 @@ public class Brommer implements Comparable<Brommer> {
     public void setKlasse(BrommerKlasse klasse) {
         // Klasse mag niet null zijn
         if(klasse == null) {
-            throw new IllegalArgumentException("Klasse mag niet null zijn");
+            logger.severe("Klasse (" + klasse + ")mag niet null zijn voor brommer " + model);
         }
         this.klasse = klasse;
     }
 
-
-
     public LocalDate getReleaseDate() {
-        return releaseDate;
+        return relaseDate;
     }
 
-    public void setReleaseDate(LocalDate releaseDate) {
+    public void setRelaseDate(LocalDate releaseDate) {
         // Relase date mag niet null zijn en niet in de toekomst liggen
         if(releaseDate == null || releaseDate.isAfter(LocalDate.now())) {
-            throw new IllegalArgumentException("Relase date mag niet null zijn en niet in de toekomst liggen");
+            logger.severe("Relase date (" + releaseDate + ") mag niet null zijn en niet in de toekomst liggen voor brommer " + model);
         }
-        this.releaseDate = releaseDate;
+        this.relaseDate = releaseDate;
     }
 
     public LocalDate getLaatsteOnderhoud() {
@@ -95,18 +100,18 @@ public class Brommer implements Comparable<Brommer> {
     public void setLaatsteOnderhoud(LocalDate laatsteOnderhoud) {
         // Laatste onderhoud mag niet null zijn en niet in de toekomst liggen
         if(laatsteOnderhoud == null || laatsteOnderhoud.isAfter(LocalDate.now())) {
-            throw new IllegalArgumentException("Laatste onderhoud mag niet null zijn en niet in de toekomst liggen");
+            logger.severe("Laatste onderhoud (" + laatsteOnderhoud +") mag niet null zijn en niet in de toekomst liggen voor brommer " + model);
         }
         this.laatsteOnderhoud = laatsteOnderhoud;
     }
 
-    public Brommer(String model, String chassisNummer, double gewicht, int aantalKeerOnderhoud, BrommerKlasse klasse, LocalDate releaseDate, LocalDate laatsteOnderhoud) {
+    public Brommer(String model, String chassisNummer, double gewicht, int aantalKeerOnderhoud, BrommerKlasse klasse, LocalDate relaseDate, LocalDate laatsteOnderhoud) {
         this.setModel(model);
         this.setChassisNummer(chassisNummer);
         this.setGewicht(gewicht);
         this.setAantalKeerOnderhoud(aantalKeerOnderhoud);
         this.setKlasse(klasse);
-        this.setReleaseDate(releaseDate);
+        this.setRelaseDate(relaseDate);
         this.setLaatsteOnderhoud(laatsteOnderhoud);
     }
 
@@ -137,7 +142,6 @@ public class Brommer implements Comparable<Brommer> {
     @Override
     public String toString() {
         // Format with fixed width
-        return String.format("%-26s (%s) %.2fkg \taantal keer onderhoud: %s , klasse: %s, Laatste onderhoud: %s, Release date: %s", this.getModel(), this.getChassisNummer(), this.getGewicht(), this.getAantalKeerOnderhoud(), this.getKlasse(), this.getLaatsteOnderhoud(), this.getReleaseDate());
+        return String.format("%-26s (%s) %.2fkg \taantal keer onderhoud: %s , klasse: %s %s, Laatste onderhoud: %s, Release date: %s", this.getModel(), this.getChassisNummer(), this.getGewicht(), this.getAantalKeerOnderhoud(), this.getKlasse(), this.getReleaseDate(), this.getLaatsteOnderhoud(), this.getReleaseDate());
     }
-
 }

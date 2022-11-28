@@ -4,4 +4,7 @@ include 'm2_generics'
 include 'm3_reflection'
 include 'm3_reflection'
 include 'm4_streams'
+include 'm8_datastructuren'
+include 'm5_loggin'
+include 'm5_logging'
 
