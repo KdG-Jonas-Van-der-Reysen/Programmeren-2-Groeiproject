@@ -13,13 +13,12 @@ public class BrommerDbDaoTest {
     BrommerDbDao dao;
     @BeforeAll
     public void beforeAll() {
-        dao = new BrommerDbDao("testdb/brommersdb");
+        dao = new BrommerDbDao("db/myDatabase");
     }
 
     @BeforeEach
     public void beforeEach() {
-        Data brommerData = new Data();
-        brommerData.getData().forEach(dao::insert);
+        Data.getData().forEach(dao::insert);
     }
 
     @AfterEach
@@ -29,8 +28,7 @@ public class BrommerDbDaoTest {
 
     @Test
     public void testInsert() {
-        Data brommerData = new Data();
-        assertEquals(brommerData.getData().size(), dao.sortedOnGewicht().size(), "Het aantal rijen klopt niet");
+        assertEquals(Data.getData().size(), dao.sortedOnGewicht().size(), "Het aantal rijen klopt niet");
     }
 
     @Test
@@ -60,10 +58,9 @@ public class BrommerDbDaoTest {
     @Test
     public void testSort() {
         // Sorted from data class
-        Data brommerData = new Data();
         Brommers brommerList = new Brommers();
 
-        brommerData.getData().forEach(brommerList::add);
+        Data.getData().forEach(brommerList::add);
 
         List<Brommer> sortedOnGewichtMemory = brommerList.sortedOnGewicht();
 
