@@ -11,7 +11,7 @@ public class Brommer implements Comparable<Brommer> {
     private double gewicht;
     private int aantalKeerOnderhoud;
     private BrommerKlasse klasse;
-    private LocalDate relaseDate;
+    private LocalDate releaseDate;
     private LocalDate laatsteOnderhoud;
 
     public String getModel() {
@@ -75,15 +75,15 @@ public class Brommer implements Comparable<Brommer> {
     }
 
     public LocalDate getReleaseDate() {
-        return relaseDate;
+        return releaseDate;
     }
 
-    public void setRelaseDate(LocalDate relaseDate) {
-        // Relase date mag niet null zijn en niet in de toekomst liggen
-        if(relaseDate == null || relaseDate.isAfter(LocalDate.now())) {
+    public void setReleaseDate(LocalDate releaseDate) {
+        // Release date mag niet null zijn en niet in de toekomst liggen
+        if(releaseDate == null || releaseDate.isAfter(LocalDate.now())) {
             throw new IllegalArgumentException("Relase date mag niet null zijn en niet in de toekomst liggen");
         }
-        this.relaseDate = relaseDate;
+        this.releaseDate = releaseDate;
     }
 
     public LocalDate getLaatsteOnderhoud() {
@@ -98,13 +98,13 @@ public class Brommer implements Comparable<Brommer> {
         this.laatsteOnderhoud = laatsteOnderhoud;
     }
 
-    public Brommer(String model, String chassisNummer, double gewicht, int aantalKeerOnderhoud, BrommerKlasse klasse, LocalDate relaseDate, LocalDate laatsteOnderhoud) {
+    public Brommer(String model, String chassisNummer, double gewicht, int aantalKeerOnderhoud, BrommerKlasse klasse, LocalDate releaseDate, LocalDate laatsteOnderhoud) {
         this.setModel(model);
         this.setChassisNummer(chassisNummer);
         this.setGewicht(gewicht);
         this.setAantalKeerOnderhoud(aantalKeerOnderhoud);
         this.setKlasse(klasse);
-        this.setRelaseDate(relaseDate);
+        this.setReleaseDate(releaseDate);
         this.setLaatsteOnderhoud(laatsteOnderhoud);
     }
 

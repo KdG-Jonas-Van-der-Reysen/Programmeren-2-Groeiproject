@@ -69,7 +69,7 @@ public class Voertuig implements Comparable<Brommer> {
     }
 
     public void setReleaseDate(LocalDate releaseDate) {
-        // Relase date mag niet null zijn en niet in de toekomst liggen
+        // Release date mag niet null zijn en niet in de toekomst liggen
         if(releaseDate == null || releaseDate.isAfter(LocalDate.now())) {
             throw new IllegalArgumentException("Relase date mag niet null zijn en niet in de toekomst liggen");
         }

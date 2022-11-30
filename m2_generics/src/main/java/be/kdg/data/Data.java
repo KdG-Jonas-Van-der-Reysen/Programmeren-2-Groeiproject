@@ -12,7 +12,7 @@ public class Data {
     public static List<Brommer> getData() {
         ArrayList<Brommer> brommers = new ArrayList<>();
 
-        // Model, chassisNummer (random from list above), gewicht (from data above), aantalKeerOnderhoud (random number), klasse (from data above), relaseDate (from data above, 0 = A, 1 = B), laatsteOnderhoud (random date in the past)
+        // Model, chassisNummer (random from list above), gewicht (from data above), aantalKeerOnderhoud (random number), klasse (from data above), releaseDate (from data above, 0 = A, 1 = B), laatsteOnderhoud (random date in the past)
         brommers.add(new Brommer("Segway E125S", "3GYFK66N83G231247", 3599, 3, BrommerKlasse.B, LocalDate.of(2019, 1, 14), LocalDate.of(2022, 8, 22)));
         brommers.add(new Brommer("Segway E110SE", "1B3CC4FB6AN100405", 2499, 2, BrommerKlasse.B, LocalDate.of(2003, 5, 17), LocalDate.of(2022, 3, 21)));
         brommers.add(new Brommer("Segway E110S", "2G4WS52J421173448", 2299, 1, BrommerKlasse.B, LocalDate.of(1927, 9, 29), LocalDate.of(2022, 5, 20)));

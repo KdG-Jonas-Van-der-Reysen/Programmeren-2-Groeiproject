@@ -6,9 +6,9 @@
   <millis>1669632761532</millis>
   <nanos>944900</nanos>
   <sequence>0</sequence>
-  <logger>be.kdg.model.Brommer</logger>
+  <logger>be.model.be.kdg.Brommer</logger>
   <level>SEVERE</level>
-  <class>be.kdg.model.Brommer</class>
+  <class>be.model.be.kdg.Brommer</class>
   <method>setModel</method>
   <thread>1</thread>
   <message>Model () is niet geldig, het mag niet leeg zijn.</message>
@@ -18,9 +18,9 @@
   <millis>1669632761588</millis>
   <nanos>947600</nanos>
   <sequence>1</sequence>
-  <logger>be.kdg.model.Brommer</logger>
+  <logger>be.model.be.kdg.Brommer</logger>
   <level>SEVERE</level>
-  <class>be.kdg.model.Brommer</class>
+  <class>be.model.be.kdg.Brommer</class>
   <method>setGewicht</method>
   <thread>1</thread>
   <message>Gewicht (-2300.12) mag niet negatief of 0 zijn voor brommer Sym orbit 3</message>
@@ -30,9 +30,9 @@
   <millis>1669632761589</millis>
   <nanos>949100</nanos>
   <sequence>2</sequence>
-  <logger>be.kdg.model.Brommer</logger>
+  <logger>be.model.be.kdg.Brommer</logger>
   <level>SEVERE</level>
-  <class>be.kdg.model.Brommer</class>
+  <class>be.model.be.kdg.Brommer</class>
   <method>setGewicht</method>
   <thread>1</thread>
   <message>Gewicht (-2300.12) mag niet negatief of 0 zijn voor brommer Sym orbit 3</message>
@@ -42,9 +42,9 @@
   <millis>1669632761595</millis>
   <nanos>950100</nanos>
   <sequence>3</sequence>
-  <logger>be.kdg.model.Brommer</logger>
+  <logger>be.model.be.kdg.Brommer</logger>
   <level>SEVERE</level>
-  <class>be.kdg.model.Brommer</class>
+  <class>be.model.be.kdg.Brommer</class>
   <method>setAantalKeerOnderhoud</method>
   <thread>1</thread>
   <message>Aantal keer onderhoud (-2) mag niet negatief zijn voor brommer Sym orbit 3</message>
@@ -54,9 +54,9 @@
   <millis>1669632761598</millis>
   <nanos>450400</nanos>
   <sequence>4</sequence>
-  <logger>be.kdg.model.Brommer</logger>
+  <logger>be.model.be.kdg.Brommer</logger>
   <level>SEVERE</level>
-  <class>be.kdg.model.Brommer</class>
+  <class>be.model.be.kdg.Brommer</class>
   <method>setChassisNummer</method>
   <thread>1</thread>
   <message>Chassisnummer () mag niet leeg zijn voor brommer Sym orbit 3</message>
@@ -66,9 +66,9 @@
   <millis>1669632761598</millis>
   <nanos>949800</nanos>
   <sequence>5</sequence>
-  <logger>be.kdg.model.Brommer</logger>
+  <logger>be.model.be.kdg.Brommer</logger>
   <level>SEVERE</level>
-  <class>be.kdg.model.Brommer</class>
+  <class>be.model.be.kdg.Brommer</class>
   <method>setGewicht</method>
   <thread>1</thread>
   <message>Gewicht (-2300.12) mag niet negatief of 0 zijn voor brommer Sym orbit 3</message>
@@ -78,9 +78,9 @@
   <millis>1669632761598</millis>
   <nanos>949800</nanos>
   <sequence>6</sequence>
-  <logger>be.kdg.model.Brommer</logger>
+  <logger>be.model.be.kdg.Brommer</logger>
   <level>SEVERE</level>
-  <class>be.kdg.model.Brommer</class>
+  <class>be.model.be.kdg.Brommer</class>
   <method>setAantalKeerOnderhoud</method>
   <thread>1</thread>
   <message>Aantal keer onderhoud (-2) mag niet negatief zijn voor brommer Sym orbit 3</message>
@@ -90,9 +90,9 @@
   <millis>1669632761601</millis>
   <nanos>947000</nanos>
   <sequence>7</sequence>
-  <logger>be.kdg.model.Brommers</logger>
+  <logger>be.model.be.kdg.Brommers</logger>
   <level>FINER</level>
-  <class>be.kdg.model.Brommers</class>
+  <class>be.model.be.kdg.Brommers</class>
   <method>add</method>
   <thread>1</thread>
   <message>Brommer Segway E125S toegevoegd aan treeset</message>
@@ -102,9 +102,9 @@
   <millis>1669632761602</millis>
   <nanos>451100</nanos>
   <sequence>8</sequence>
-  <logger>be.kdg.model.Brommers</logger>
+  <logger>be.model.be.kdg.Brommers</logger>
   <level>FINER</level>
-  <class>be.kdg.model.Brommers</class>
+  <class>be.model.be.kdg.Brommers</class>
   <method>add</method>
   <thread>1</thread>
   <message>Brommer Segway E110SE toegevoegd aan treeset</message>
@@ -114,9 +114,9 @@
   <millis>1669632761602</millis>
   <nanos>451100</nanos>
   <sequence>9</sequence>
-  <logger>be.kdg.model.Brommers</logger>
+  <logger>be.model.be.kdg.Brommers</logger>
   <level>FINER</level>
-  <class>be.kdg.model.Brommers</class>
+  <class>be.model.be.kdg.Brommers</class>
   <method>add</method>
   <thread>1</thread>
   <message>Brommer Segway E110S toegevoegd aan treeset</message>
@@ -126,9 +126,9 @@
   <millis>1669632761602</millis>
   <nanos>945800</nanos>
   <sequence>10</sequence>
-  <logger>be.kdg.model.Brommers</logger>
+  <logger>be.model.be.kdg.Brommers</logger>
   <level>FINER</level>
-  <class>be.kdg.model.Brommers</class>
+  <class>be.model.be.kdg.Brommers</class>
   <method>add</method>
   <thread>1</thread>
   <message>Brommer Segway B110S toegevoegd aan treeset</message>
@@ -138,9 +138,9 @@
   <millis>1669632761603</millis>
   <nanos>450000</nanos>
   <sequence>11</sequence>
-  <logger>be.kdg.model.Brommers</logger>
+  <logger>be.model.be.kdg.Brommers</logger>
   <level>FINER</level>
-  <class>be.kdg.model.Brommers</class>
+  <class>be.model.be.kdg.Brommers</class>
   <method>add</method>
   <thread>1</thread>
   <message>Brommer Brekr Model B toegevoegd aan treeset</message>
@@ -150,9 +150,9 @@
   <millis>1669632761604</millis>
   <nanos>456600</nanos>
   <sequence>12</sequence>
-  <logger>be.kdg.model.Brommers</logger>
+  <logger>be.model.be.kdg.Brommers</logger>
   <level>FINER</level>
-  <class>be.kdg.model.Brommers</class>
+  <class>be.model.be.kdg.Brommers</class>
   <method>remove</method>
   <thread>1</thread>
   <message>Brommer Segway E110SE verwijderd uit treeset</message>
@@ -162,9 +162,9 @@
   <millis>1669632761604</millis>
   <nanos>957800</nanos>
   <sequence>13</sequence>
-  <logger>be.kdg.model.Brommers</logger>
+  <logger>be.model.be.kdg.Brommers</logger>
   <level>FINER</level>
-  <class>be.kdg.model.Brommers</class>
+  <class>be.model.be.kdg.Brommers</class>
   <method>remove</method>
   <thread>1</thread>
   <message>Brommer Brekr Model B verwijderd uit treeset</message>
