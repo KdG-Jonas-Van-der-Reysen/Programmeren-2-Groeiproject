@@ -39,12 +39,12 @@ public class BrommersDomParser {
 
             brommers.add(new Brommer(
                     e.getAttribute("model"),
-                    getPropertyValue(e, "chassisNummer"),
+                    getPropertyValue(e, "chassis-nummer"),
                     Double.parseDouble(getPropertyValue(e, "gewicht")),
-                    Integer.parseInt(getPropertyValue(e, "aantalKeerOnderhoud")),
+                    Integer.parseInt(getPropertyValue(e, "aantal-keer-onderhoud")),
                     BrommerKlasse.valueOf(getPropertyValue(e, "klasse")),
-                    LocalDate.parse(getPropertyValue(e, "releaseDate")),
-                    LocalDate.parse(getPropertyValue(e, "laatsteOnderhoud"))
+                    LocalDate.parse(getPropertyValue(e, "release-date")),
+                    LocalDate.parse(getPropertyValue(e, "laatste-onderhoud"))
             ));
         }
 

@@ -52,7 +52,7 @@ public class BrommersStaxParser {
             streamWriter.writeAttribute("model", brommer.getModel());
 
             // chassisNummer
-            streamWriter.writeStartElement("chassisNummer");
+            streamWriter.writeStartElement("chassis-nummer");
             streamWriter.writeCharacters(brommer.getChassisNummer());
             streamWriter.writeEndElement();
 
@@ -62,7 +62,7 @@ public class BrommersStaxParser {
             streamWriter.writeEndElement();
 
             // aantalKeerOnderhoud
-            streamWriter.writeStartElement("aantalKeerOnderhoud");
+            streamWriter.writeStartElement("aantal-keer-onderhoud");
             streamWriter.writeCharacters(Integer.toString(brommer.getAantalKeerOnderhoud()));
             streamWriter.writeEndElement();
 
@@ -72,12 +72,12 @@ public class BrommersStaxParser {
             streamWriter.writeEndElement();
 
             // releaseDate
-            streamWriter.writeStartElement("releaseDate");
+            streamWriter.writeStartElement("release-date");
             streamWriter.writeCharacters(brommer.getReleaseDate().toString());
             streamWriter.writeEndElement();
 
             // laatsteOnderhoud
-            streamWriter.writeStartElement("laatsteOnderhoud");
+            streamWriter.writeStartElement("laatste-onderhoud");
             streamWriter.writeCharacters(brommer.getLaatsteOnderhoud().toString());
             streamWriter.writeEndElement();
 

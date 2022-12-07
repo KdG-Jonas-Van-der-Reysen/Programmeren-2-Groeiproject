@@ -1,123 +1,123 @@
 <?xml version="1.0" ?>
 <brommers>
+  <brommer model="Segway E125S">
+    <chassis-nummer>3GYFK66N83G231247</chassis-nummer>
+    <gewicht>3599.0</gewicht>
+    <aantal-keer-onderhoud>3</aantal-keer-onderhoud>
+    <klasse>B</klasse>
+    <release-date>2019-01-14</release-date>
+    <laatste-onderhoud>2022-08-22</laatste-onderhoud>
+  </brommer>
   <brommer model="Segway E110SE">
-    <chassisNummer>1B3CC4FB6AN100405</chassisNummer>
+    <chassis-nummer>1B3CC4FB6AN100405</chassis-nummer>
     <gewicht>2499.0</gewicht>
-    <aantalKeerOnderhoud>2</aantalKeerOnderhoud>
+    <aantal-keer-onderhoud>2</aantal-keer-onderhoud>
     <klasse>B</klasse>
-    <releaseDate>2003-05-17</releaseDate>
-    <laatsteOnderhoud>2022-03-21</laatsteOnderhoud>
-  </brommer>
-  <brommer model="Piaggio Liberty 50 S">
-    <chassisNummer>1FAFP25195G101531</chassisNummer>
-    <gewicht>2858.0</gewicht>
-    <aantalKeerOnderhoud>1</aantalKeerOnderhoud>
-    <klasse>B</klasse>
-    <releaseDate>2007-01-16</releaseDate>
-    <laatsteOnderhoud>1987-08-25</laatsteOnderhoud>
-  </brommer>
-  <brommer model="Brekr Model B">
-    <chassisNummer>1FTJW36F6TEB28864</chassisNummer>
-    <gewicht>4749.0</gewicht>
-    <aantalKeerOnderhoud>3</aantalKeerOnderhoud>
-    <klasse>B</klasse>
-    <releaseDate>2016-05-07</releaseDate>
-    <laatsteOnderhoud>2015-07-25</laatsteOnderhoud>
-  </brommer>
-  <brommer model="Horwin EK1">
-    <chassisNummer>1FTRW07602KE58452</chassisNummer>
-    <gewicht>2999.0</gewicht>
-    <aantalKeerOnderhoud>2</aantalKeerOnderhoud>
-    <klasse>A</klasse>
-    <releaseDate>2018-02-09</releaseDate>
-    <laatsteOnderhoud>1946-06-25</laatsteOnderhoud>
-  </brommer>
-  <brommer model="NIU NQi Sport">
-    <chassisNummer>1GDGG31V141997219</chassisNummer>
-    <gewicht>3374.0</gewicht>
-    <aantalKeerOnderhoud>1</aantalKeerOnderhoud>
-    <klasse>A</klasse>
-    <releaseDate>2007-01-16</releaseDate>
-    <laatsteOnderhoud>1965-09-25</laatsteOnderhoud>
-  </brommer>
-  <brommer model="AGM VX50I">
-    <chassisNummer>1J4GW48SX2C184675</chassisNummer>
-    <gewicht>1775.0</gewicht>
-    <aantalKeerOnderhoud>1</aantalKeerOnderhoud>
-    <klasse>B</klasse>
-    <releaseDate>1927-09-29</releaseDate>
-    <laatsteOnderhoud>1999-03-25</laatsteOnderhoud>
+    <release-date>2003-05-17</release-date>
+    <laatste-onderhoud>2022-03-21</laatste-onderhoud>
   </brommer>
   <brommer model="Segway E110S">
-    <chassisNummer>2G4WS52J421173448</chassisNummer>
+    <chassis-nummer>2G4WS52J421173448</chassis-nummer>
     <gewicht>2299.0</gewicht>
-    <aantalKeerOnderhoud>1</aantalKeerOnderhoud>
+    <aantal-keer-onderhoud>1</aantal-keer-onderhoud>
     <klasse>B</klasse>
-    <releaseDate>1927-09-29</releaseDate>
-    <laatsteOnderhoud>2022-05-20</laatsteOnderhoud>
-  </brommer>
-  <brommer model="Peugeot Django">
-    <chassisNummer>2GCEC13VX71140064</chassisNummer>
-    <gewicht>3398.0</gewicht>
-    <aantalKeerOnderhoud>2</aantalKeerOnderhoud>
-    <klasse>B</klasse>
-    <releaseDate>2018-02-09</releaseDate>
-    <laatsteOnderhoud>2019-04-25</laatsteOnderhoud>
-  </brommer>
-  <brommer model="Segway E125S">
-    <chassisNummer>3GYFK66N83G231247</chassisNummer>
-    <gewicht>3599.0</gewicht>
-    <aantalKeerOnderhoud>3</aantalKeerOnderhoud>
-    <klasse>B</klasse>
-    <releaseDate>2019-01-14</releaseDate>
-    <laatsteOnderhoud>2022-08-22</laatsteOnderhoud>
-  </brommer>
-  <brommer model="Sym Orbit 3">
-    <chassisNummer>3LNHM26T77R671336</chassisNummer>
-    <gewicht>2300.0</gewicht>
-    <aantalKeerOnderhoud>2</aantalKeerOnderhoud>
-    <klasse>A</klasse>
-    <releaseDate>2003-05-17</releaseDate>
-    <laatsteOnderhoud>2014-11-25</laatsteOnderhoud>
-  </brommer>
-  <brommer model="Peugeot Kisbee Streetline">
-    <chassisNummer>4A4MN21S06E055275</chassisNummer>
-    <gewicht>2448.0</gewicht>
-    <aantalKeerOnderhoud>3</aantalKeerOnderhoud>
-    <klasse>A</klasse>
-    <releaseDate>2016-05-07</releaseDate>
-    <laatsteOnderhoud>1984-02-25</laatsteOnderhoud>
-  </brommer>
-  <brommer model="Peugeot Kisbee Active">
-    <chassisNummer>5FNYF48589B069185</chassisNummer>
-    <gewicht>2298.0</gewicht>
-    <aantalKeerOnderhoud>0</aantalKeerOnderhoud>
-    <klasse>B</klasse>
-    <releaseDate>2013-03-18</releaseDate>
-    <laatsteOnderhoud>1944-01-25</laatsteOnderhoud>
-  </brommer>
-  <brommer model="Super Soco CUX">
-    <chassisNummer>JM1BK12F541168422</chassisNummer>
-    <gewicht>2998.0</gewicht>
-    <aantalKeerOnderhoud>0</aantalKeerOnderhoud>
-    <klasse>A</klasse>
-    <releaseDate>2004-07-17</releaseDate>
-    <laatsteOnderhoud>2018-08-25</laatsteOnderhoud>
+    <release-date>1927-09-29</release-date>
+    <laatste-onderhoud>2022-05-20</laatste-onderhoud>
   </brommer>
   <brommer model="Segway B110S">
-    <chassisNummer>KMHTC6AD9DU186351</chassisNummer>
+    <chassis-nummer>KMHTC6AD9DU186351</chassis-nummer>
     <gewicht>1779.0</gewicht>
-    <aantalKeerOnderhoud>0</aantalKeerOnderhoud>
+    <aantal-keer-onderhoud>0</aantal-keer-onderhoud>
     <klasse>B</klasse>
-    <releaseDate>2013-03-18</releaseDate>
-    <laatsteOnderhoud>2013-04-25</laatsteOnderhoud>
+    <release-date>2013-03-18</release-date>
+    <laatste-onderhoud>2013-04-25</laatste-onderhoud>
+  </brommer>
+  <brommer model="Brekr Model B">
+    <chassis-nummer>1FTJW36F6TEB28864</chassis-nummer>
+    <gewicht>4749.0</gewicht>
+    <aantal-keer-onderhoud>3</aantal-keer-onderhoud>
+    <klasse>B</klasse>
+    <release-date>2016-05-07</release-date>
+    <laatste-onderhoud>2015-07-25</laatste-onderhoud>
+  </brommer>
+  <brommer model="Horwin EK1">
+    <chassis-nummer>1FTRW07602KE58452</chassis-nummer>
+    <gewicht>2999.0</gewicht>
+    <aantal-keer-onderhoud>2</aantal-keer-onderhoud>
+    <klasse>A</klasse>
+    <release-date>2018-02-09</release-date>
+    <laatste-onderhoud>1946-06-25</laatste-onderhoud>
+  </brommer>
+  <brommer model="NIU NQi Sport">
+    <chassis-nummer>1GDGG31V141997219</chassis-nummer>
+    <gewicht>3374.0</gewicht>
+    <aantal-keer-onderhoud>1</aantal-keer-onderhoud>
+    <klasse>A</klasse>
+    <release-date>2007-01-16</release-date>
+    <laatste-onderhoud>1965-09-25</laatste-onderhoud>
+  </brommer>
+  <brommer model="Super Soco CUX">
+    <chassis-nummer>JM1BK12F541168422</chassis-nummer>
+    <gewicht>2998.0</gewicht>
+    <aantal-keer-onderhoud>0</aantal-keer-onderhoud>
+    <klasse>A</klasse>
+    <release-date>2004-07-17</release-date>
+    <laatste-onderhoud>2018-08-25</laatste-onderhoud>
   </brommer>
   <brommer model="Sym Orbit 2">
-    <chassisNummer>WBXPC93408WJ88698</chassisNummer>
+    <chassis-nummer>WBXPC93408WJ88698</chassis-nummer>
     <gewicht>2100.0</gewicht>
-    <aantalKeerOnderhoud>3</aantalKeerOnderhoud>
+    <aantal-keer-onderhoud>3</aantal-keer-onderhoud>
     <klasse>B</klasse>
-    <releaseDate>2019-01-14</releaseDate>
-    <laatsteOnderhoud>2010-12-25</laatsteOnderhoud>
+    <release-date>2019-01-14</release-date>
+    <laatste-onderhoud>2010-12-25</laatste-onderhoud>
+  </brommer>
+  <brommer model="Sym Orbit 3">
+    <chassis-nummer>3LNHM26T77R671336</chassis-nummer>
+    <gewicht>2300.0</gewicht>
+    <aantal-keer-onderhoud>2</aantal-keer-onderhoud>
+    <klasse>A</klasse>
+    <release-date>2003-05-17</release-date>
+    <laatste-onderhoud>2014-11-25</laatste-onderhoud>
+  </brommer>
+  <brommer model="AGM VX50I">
+    <chassis-nummer>1J4GW48SX2C184675</chassis-nummer>
+    <gewicht>1775.0</gewicht>
+    <aantal-keer-onderhoud>1</aantal-keer-onderhoud>
+    <klasse>B</klasse>
+    <release-date>1927-09-29</release-date>
+    <laatste-onderhoud>1999-03-25</laatste-onderhoud>
+  </brommer>
+  <brommer model="Peugeot Kisbee Active">
+    <chassis-nummer>5FNYF48589B069185</chassis-nummer>
+    <gewicht>2298.0</gewicht>
+    <aantal-keer-onderhoud>0</aantal-keer-onderhoud>
+    <klasse>B</klasse>
+    <release-date>2013-03-18</release-date>
+    <laatste-onderhoud>1944-01-25</laatste-onderhoud>
+  </brommer>
+  <brommer model="Peugeot Kisbee Streetline">
+    <chassis-nummer>4A4MN21S06E055275</chassis-nummer>
+    <gewicht>2448.0</gewicht>
+    <aantal-keer-onderhoud>3</aantal-keer-onderhoud>
+    <klasse>A</klasse>
+    <release-date>2016-05-07</release-date>
+    <laatste-onderhoud>1984-02-25</laatste-onderhoud>
+  </brommer>
+  <brommer model="Peugeot Django">
+    <chassis-nummer>2GCEC13VX71140064</chassis-nummer>
+    <gewicht>3398.0</gewicht>
+    <aantal-keer-onderhoud>2</aantal-keer-onderhoud>
+    <klasse>B</klasse>
+    <release-date>2018-02-09</release-date>
+    <laatste-onderhoud>2019-04-25</laatste-onderhoud>
+  </brommer>
+  <brommer model="Piaggio Liberty 50 S">
+    <chassis-nummer>1FAFP25195G101531</chassis-nummer>
+    <gewicht>2858.0</gewicht>
+    <aantal-keer-onderhoud>1</aantal-keer-onderhoud>
+    <klasse>B</klasse>
+    <release-date>2007-01-16</release-date>
+    <laatste-onderhoud>1987-08-25</laatste-onderhoud>
   </brommer>
 </brommers>

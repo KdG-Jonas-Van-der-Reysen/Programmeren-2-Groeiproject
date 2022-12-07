@@ -1,8 +1,15 @@
 package be.kdg.model;
 
+import be.kdg.jaxb.LocalDateAdapter;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 import java.time.LocalDate;
 import java.util.Objects;
 
+@XmlType(propOrder = {"chassisNummer","gewicht","aantalKeerOnderhoud","klasse","releaseDate","laatsteOnderhoud"})
 public class Brommer implements Comparable<Brommer> {
     // Properties
     private String model;
@@ -28,6 +35,7 @@ public class Brommer implements Comparable<Brommer> {
         return model;
     }
 
+    @XmlAttribute(name = "model")
     public void setModel(String model) {
         if(model.isBlank() || model.isEmpty()) {
             throw new IllegalArgumentException("Model mag niet leeg zijn");
@@ -39,6 +47,7 @@ public class Brommer implements Comparable<Brommer> {
         return chassisNummer;
     }
 
+    @XmlElement(name = "chassis-nummer")
     public void setChassisNummer(String chassisNummer) {
         // Chassisnummer mag niet leeg zijn
         if(chassisNummer.isBlank() || chassisNummer.isEmpty()) {
@@ -64,6 +73,7 @@ public class Brommer implements Comparable<Brommer> {
         return aantalKeerOnderhoud;
     }
 
+    @XmlElement(name = "aantal-keer-onderhoud")
     public void setAantalKeerOnderhoud(int aantalKeerOnderhoud) {
         // Aantal keer onderhoud mag niet negatief zijn
         if(aantalKeerOnderhoud < 0) {
@@ -88,6 +98,9 @@ public class Brommer implements Comparable<Brommer> {
         return releaseDate;
     }
 
+    @XmlElement(name = "release-date")
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
+
     public void setReleaseDate(LocalDate releaseDate) {
         // Release date mag niet null zijn en niet in de toekomst liggen
         if(releaseDate == null || releaseDate.isAfter(LocalDate.now())) {
@@ -100,6 +113,8 @@ public class Brommer implements Comparable<Brommer> {
         return laatsteOnderhoud;
     }
 
+    @XmlElement(name = "laatste-onderhoud")
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     public void setLaatsteOnderhoud(LocalDate laatsteOnderhoud) {
         // Laatste onderhoud mag niet null zijn en niet in de toekomst liggen
         if(laatsteOnderhoud == null || laatsteOnderhoud.isAfter(LocalDate.now())) {

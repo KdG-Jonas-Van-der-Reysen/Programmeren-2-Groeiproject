@@ -46,4 +46,34 @@ class ParserTest {
             () -> assertEquals(brommersList.get(5), readFromXmlList.get(5), "De brommers moeten gelijk zijn")
         );
     }
+
+    @Test
+    public void testJaxb() {
+        BrommerssJaxbParser.JaxbWriteXml("datafiles/brommersJaxb.xml", brommers);
+        Brommers readFromXml = BrommerssJaxbParser.JaxbReadXml("datafiles/brommersJaxb.xml", Brommers.class);
+
+        List<Brommer> brommersList = brommers.getBrommers().stream().toList();
+        List<Brommer> readFromXmlList = readFromXml.getBrommers().stream().toList();
+
+        assertAll(
+                () -> assertEquals(brommersList.get(0), readFromXmlList.get(0), "De brommers moeten gelijk zijn"),
+                () -> assertEquals(brommersList.get(2), readFromXmlList.get(2), "De brommers moeten gelijk zijn"),
+                () -> assertEquals(brommersList.get(5), readFromXmlList.get(5), "De brommers moeten gelijk zijn")
+        );
+    }
+
+    @Test
+    public void testGson() {
+        BrommersGsonParser.writeJson(brommers, "datafiles/brommersGson.json");
+        Brommers readFromJson = BrommersGsonParser.readJson("datafiles/brommersGson.json");
+
+        List<Brommer> brommersList = brommers.getBrommers().stream().toList();
+        List<Brommer> readFromXmlList = readFromJson.getBrommers().stream().toList();
+
+        assertAll(
+                () -> assertEquals(brommersList.get(0), readFromXmlList.get(0), "De brommers moeten gelijk zijn"),
+                () -> assertEquals(brommersList.get(2), readFromXmlList.get(2), "De brommers moeten gelijk zijn"),
+                () -> assertEquals(brommersList.get(5), readFromXmlList.get(5), "De brommers moeten gelijk zijn")
+        );
+    }
 }

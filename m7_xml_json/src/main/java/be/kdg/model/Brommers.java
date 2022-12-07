@@ -1,11 +1,18 @@
 package be.kdg.model;
 
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+
 import java.util.*;
+
+@XmlRootElement(name = "brommers")
+
 public class Brommers {
-    private TreeSet<Brommer> brommers;
+
+    private ArrayList<Brommer> brommers;
 
     public Brommers() {
-        this.brommers = new TreeSet<>();
+        this.brommers = new ArrayList<>();
     }
 
     private class GewichtComparator implements Comparator<Brommer> {
@@ -87,7 +94,12 @@ public class Brommers {
     }
 
     // Function to return the treeset
-    public TreeSet<Brommer> getBrommers() {
+    public ArrayList<Brommer> getBrommers() {
         return brommers;
+    }
+
+    @XmlElement(name = "brommer")
+    public void setBrommers(ArrayList<Brommer> brommers) {
+        this.brommers = brommers;
     }
 }
