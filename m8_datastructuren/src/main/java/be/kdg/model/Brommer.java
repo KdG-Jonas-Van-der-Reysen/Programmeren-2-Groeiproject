@@ -98,7 +98,7 @@ public class Brommer implements Comparable<Brommer> {
         this.laatsteOnderhoud = laatsteOnderhoud;
     }
 
-    public Brommer(String model, String chassisNummer, double gewicht, int aantalKeerOnderhoud, BrommerKlasse klasse, LocalDate releaseDate, LocalDate laatsteOnderhoud) {
+    protected Brommer(String model, String chassisNummer, double gewicht, int aantalKeerOnderhoud, BrommerKlasse klasse, LocalDate releaseDate, LocalDate laatsteOnderhoud) {
         this.setModel(model);
         this.setChassisNummer(chassisNummer);
         this.setGewicht(gewicht);
@@ -135,6 +135,6 @@ public class Brommer implements Comparable<Brommer> {
     @Override
     public String toString() {
         // Format with fixed width
-        return String.format("%-26s (%s) %.2fkg \taantal keer onderhoud: %s , klasse: %s %s, Laatste onderhoud: %s, Release date: %s", this.getModel(), this.getChassisNummer(), this.getGewicht(), this.getAantalKeerOnderhoud(), this.getKlasse(), this.getReleaseDate(), this.getLaatsteOnderhoud(), this.getReleaseDate());
+        return String.format("%-26s (%s) %.2fkg \taantal keer onderhoud: %s , klasse: %s, Laatste onderhoud: %s, Release date: %s", this.getModel(), this.getChassisNummer(), this.getGewicht(), this.getAantalKeerOnderhoud(), this.getKlasse(), this.getLaatsteOnderhoud(), this.getReleaseDate());
     }
 }

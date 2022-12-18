@@ -1,0 +1,139 @@
+{
+  "brommers": [
+    {
+      "model": "Segway E125S",
+      "chassisNummer": "3GYFK66N83G231247",
+      "gewicht": 3599.0,
+      "aantalKeerOnderhoud": 3,
+      "klasse": "B",
+      "releaseDate": "2019-01-14",
+      "laatsteOnderhoud": "2022-08-22"
+    },
+    {
+      "model": "Segway E110SE",
+      "chassisNummer": "1B3CC4FB6AN100405",
+      "gewicht": 2499.0,
+      "aantalKeerOnderhoud": 2,
+      "klasse": "B",
+      "releaseDate": "2003-05-17",
+      "laatsteOnderhoud": "2022-03-21"
+    },
+    {
+      "model": "Segway E110S",
+      "chassisNummer": "2G4WS52J421173448",
+      "gewicht": 2299.0,
+      "aantalKeerOnderhoud": 1,
+      "klasse": "B",
+      "releaseDate": "1927-09-29",
+      "laatsteOnderhoud": "2022-05-20"
+    },
+    {
+      "model": "Segway B110S",
+      "chassisNummer": "KMHTC6AD9DU186351",
+      "gewicht": 1779.0,
+      "aantalKeerOnderhoud": 0,
+      "klasse": "B",
+      "releaseDate": "2013-03-18",
+      "laatsteOnderhoud": "2013-04-25"
+    },
+    {
+      "model": "Brekr Model B",
+      "chassisNummer": "1FTJW36F6TEB28864",
+      "gewicht": 4749.0,
+      "aantalKeerOnderhoud": 3,
+      "klasse": "B",
+      "releaseDate": "2016-05-07",
+      "laatsteOnderhoud": "2015-07-25"
+    },
+    {
+      "model": "Horwin EK1",
+      "chassisNummer": "1FTRW07602KE58452",
+      "gewicht": 2999.0,
+      "aantalKeerOnderhoud": 2,
+      "klasse": "A",
+      "releaseDate": "2018-02-09",
+      "laatsteOnderhoud": "1946-06-25"
+    },
+    {
+      "model": "NIU NQi Sport",
+      "chassisNummer": "1GDGG31V141997219",
+      "gewicht": 3374.0,
+      "aantalKeerOnderhoud": 1,
+      "klasse": "A",
+      "releaseDate": "2007-01-16",
+      "laatsteOnderhoud": "1965-09-25"
+    },
+    {
+      "model": "Super Soco CUX",
+      "chassisNummer": "JM1BK12F541168422",
+      "gewicht": 2998.0,
+      "aantalKeerOnderhoud": 0,
+      "klasse": "A",
+      "releaseDate": "2004-07-17",
+      "laatsteOnderhoud": "2018-08-25"
+    },
+    {
+      "model": "Sym Orbit 2",
+      "chassisNummer": "WBXPC93408WJ88698",
+      "gewicht": 2100.0,
+      "aantalKeerOnderhoud": 3,
+      "klasse": "B",
+      "releaseDate": "2019-01-14",
+      "laatsteOnderhoud": "2010-12-25"
+    },
+    {
+      "model": "Sym Orbit 3",
+      "chassisNummer": "3LNHM26T77R671336",
+      "gewicht": 2300.0,
+      "aantalKeerOnderhoud": 2,
+      "klasse": "A",
+      "releaseDate": "2003-05-17",
+      "laatsteOnderhoud": "2014-11-25"
+    },
+    {
+      "model": "AGM VX50I",
+      "chassisNummer": "1J4GW48SX2C184675",
+      "gewicht": 1775.0,
+      "aantalKeerOnderhoud": 1,
+      "klasse": "B",
+      "releaseDate": "1927-09-29",
+      "laatsteOnderhoud": "1999-03-25"
+    },
+    {
+      "model": "Peugeot Kisbee Active",
+      "chassisNummer": "5FNYF48589B069185",
+      "gewicht": 2298.0,
+      "aantalKeerOnderhoud": 0,
+      "klasse": "B",
+      "releaseDate": "2013-03-18",
+      "laatsteOnderhoud": "1944-01-25"
+    },
+    {
+      "model": "Peugeot Kisbee Streetline",
+      "chassisNummer": "4A4MN21S06E055275",
+      "gewicht": 2448.0,
+      "aantalKeerOnderhoud": 3,
+      "klasse": "A",
+      "releaseDate": "2016-05-07",
+      "laatsteOnderhoud": "1984-02-25"
+    },
+    {
+      "model": "Peugeot Django",
+      "chassisNummer": "2GCEC13VX71140064",
+      "gewicht": 3398.0,
+      "aantalKeerOnderhoud": 2,
+      "klasse": "B",
+      "releaseDate": "2018-02-09",
+      "laatsteOnderhoud": "2019-04-25"
+    },
+    {
+      "model": "Piaggio Liberty 50 S",
+      "chassisNummer": "1FAFP25195G101531",
+      "gewicht": 2858.0,
+      "aantalKeerOnderhoud": 1,
+      "klasse": "B",
+      "releaseDate": "2007-01-16",
+      "laatsteOnderhoud": "1987-08-25"
+    }
+  ]
+}
