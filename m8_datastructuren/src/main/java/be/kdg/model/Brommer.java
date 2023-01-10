@@ -14,6 +14,9 @@ public class Brommer implements Comparable<Brommer> {
     private LocalDate releaseDate;
     private LocalDate laatsteOnderhoud;
 
+    // Counters
+    public static int compareCounter = 0;
+
     public String getModel() {
         return model;
     }
@@ -108,7 +111,7 @@ public class Brommer implements Comparable<Brommer> {
         this.setLaatsteOnderhoud(laatsteOnderhoud);
     }
 
-    public Brommer() {
+    protected Brommer() {
         this("Onbekend","38R9AFUISKJLILQKSJ2398US", 100, 0, BrommerKlasse.A, LocalDate.now(), LocalDate.now());
     }
 
@@ -129,6 +132,7 @@ public class Brommer implements Comparable<Brommer> {
     @Override
     public int compareTo(Brommer o) {
         // Vergelijk chassisnummer alfabetisch
+        compareCounter++;
         return this.getChassisNummer().compareTo(o.getChassisNummer());
     }
 

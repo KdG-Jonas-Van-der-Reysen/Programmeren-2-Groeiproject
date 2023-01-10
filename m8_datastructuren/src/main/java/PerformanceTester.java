@@ -1,20 +1,21 @@
 
-import be.kdg.kollections.list.LinkedList;
-import be.kdg.kollections.list.List;
+import be.kdg.kollections.ArrayList;
+import be.kdg.kollections.Kollections;
+import be.kdg.kollections.LinkedList;
+import be.kdg.kollections.List;
 import be.kdg.model.Brommer;
 import be.kdg.model.BrommerFactory;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public class PerformanceTester {
 
-    //TODO: change this method for own use
     public static List<Brommer> randomList(int n) {
         List<Brommer> myList = new LinkedList<>();
         new Random().ints(n).forEach(i -> myList.add(BrommerFactory.newRandomBrommer()));
         return myList;
     }
+
 
     public static void compareArrayListAndLinkedList(int n) {
         // ADD AT BEGINNING
@@ -52,10 +53,23 @@ public class PerformanceTester {
     }
 
     public static void testSelectionSort() {
-        //TODO: test selectionsort for (int n = 1000; n < 20000; n += 1000)
+        for (int n = 1000; n < 3000; n += 1000) {
+            Brommer.compareCounter = 0;
+            List<Brommer> brommers = randomList(n);
+            Kollections.selectionSort(brommers);
+
+            System.out.println(n + ";" + Brommer.compareCounter);
+        }
+
     }
 
     public static void testMergeSort() {
-        //TODO: test mergesort for (int n = 1000; n < 200000; n += 1000)
+        for (int n = 1000; n < 3000; n += 1000) {
+            Brommer.compareCounter = 0;
+            List<Brommer> brommers = randomList(n);
+            Kollections.mergeSort(brommers);
+
+            System.out.println(n + ";" + Brommer.compareCounter);
+        }
     }
 }

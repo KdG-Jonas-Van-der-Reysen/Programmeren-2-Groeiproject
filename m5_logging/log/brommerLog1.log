@@ -2,9 +2,9 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2022-11-28T10:52:41.532944900Z</date>
-  <millis>1669632761532</millis>
-  <nanos>944900</nanos>
+  <date>2022-11-28T10:53:09.092625800Z</date>
+  <millis>1669632789092</millis>
+  <nanos>625800</nanos>
   <sequence>0</sequence>
   <logger>be.model.be.kdg.Brommer</logger>
   <level>SEVERE</level>
@@ -14,9 +14,9 @@
   <message>Model () is niet geldig, het mag niet leeg zijn.</message>
 </record>
 <record>
-  <date>2022-11-28T10:52:41.588947600Z</date>
-  <millis>1669632761588</millis>
-  <nanos>947600</nanos>
+  <date>2022-11-28T10:53:09.144619Z</date>
+  <millis>1669632789144</millis>
+  <nanos>619000</nanos>
   <sequence>1</sequence>
   <logger>be.model.be.kdg.Brommer</logger>
   <level>SEVERE</level>
@@ -26,9 +26,9 @@
   <message>Gewicht (-2300.12) mag niet negatief of 0 zijn voor brommer Sym orbit 3</message>
 </record>
 <record>
-  <date>2022-11-28T10:52:41.589949100Z</date>
-  <millis>1669632761589</millis>
-  <nanos>949100</nanos>
+  <date>2022-11-28T10:53:09.145623Z</date>
+  <millis>1669632789145</millis>
+  <nanos>623000</nanos>
   <sequence>2</sequence>
   <logger>be.model.be.kdg.Brommer</logger>
   <level>SEVERE</level>
@@ -38,9 +38,9 @@
   <message>Gewicht (-2300.12) mag niet negatief of 0 zijn voor brommer Sym orbit 3</message>
 </record>
 <record>
-  <date>2022-11-28T10:52:41.595950100Z</date>
-  <millis>1669632761595</millis>
-  <nanos>950100</nanos>
+  <date>2022-11-28T10:53:09.152123100Z</date>
+  <millis>1669632789152</millis>
+  <nanos>123100</nanos>
   <sequence>3</sequence>
   <logger>be.model.be.kdg.Brommer</logger>
   <level>SEVERE</level>
@@ -50,9 +50,9 @@
   <message>Aantal keer onderhoud (-2) mag niet negatief zijn voor brommer Sym orbit 3</message>
 </record>
 <record>
-  <date>2022-11-28T10:52:41.598450400Z</date>
-  <millis>1669632761598</millis>
-  <nanos>450400</nanos>
+  <date>2022-11-28T10:53:09.153622300Z</date>
+  <millis>1669632789153</millis>
+  <nanos>622300</nanos>
   <sequence>4</sequence>
   <logger>be.model.be.kdg.Brommer</logger>
   <level>SEVERE</level>
@@ -62,9 +62,9 @@
   <message>Chassisnummer () mag niet leeg zijn voor brommer Sym orbit 3</message>
 </record>
 <record>
-  <date>2022-11-28T10:52:41.598949800Z</date>
-  <millis>1669632761598</millis>
-  <nanos>949800</nanos>
+  <date>2022-11-28T10:53:09.154237800Z</date>
+  <millis>1669632789154</millis>
+  <nanos>237800</nanos>
   <sequence>5</sequence>
   <logger>be.model.be.kdg.Brommer</logger>
   <level>SEVERE</level>
@@ -74,9 +74,9 @@
   <message>Gewicht (-2300.12) mag niet negatief of 0 zijn voor brommer Sym orbit 3</message>
 </record>
 <record>
-  <date>2022-11-28T10:52:41.598949800Z</date>
-  <millis>1669632761598</millis>
-  <nanos>949800</nanos>
+  <date>2022-11-28T10:53:09.154624600Z</date>
+  <millis>1669632789154</millis>
+  <nanos>624600</nanos>
   <sequence>6</sequence>
   <logger>be.model.be.kdg.Brommer</logger>
   <level>SEVERE</level>
@@ -86,9 +86,9 @@
   <message>Aantal keer onderhoud (-2) mag niet negatief zijn voor brommer Sym orbit 3</message>
 </record>
 <record>
-  <date>2022-11-28T10:52:41.601947Z</date>
-  <millis>1669632761601</millis>
-  <nanos>947000</nanos>
+  <date>2022-11-28T10:53:09.157121500Z</date>
+  <millis>1669632789157</millis>
+  <nanos>121500</nanos>
   <sequence>7</sequence>
   <logger>be.model.be.kdg.Brommers</logger>
   <level>FINER</level>
@@ -98,9 +98,9 @@
   <message>Brommer Segway E125S toegevoegd aan treeset</message>
 </record>
 <record>
-  <date>2022-11-28T10:52:41.602451100Z</date>
-  <millis>1669632761602</millis>
-  <nanos>451100</nanos>
+  <date>2022-11-28T10:53:09.157630Z</date>
+  <millis>1669632789157</millis>
+  <nanos>630000</nanos>
   <sequence>8</sequence>
   <logger>be.model.be.kdg.Brommers</logger>
   <level>FINER</level>
@@ -110,9 +110,9 @@
   <message>Brommer Segway E110SE toegevoegd aan treeset</message>
 </record>
 <record>
-  <date>2022-11-28T10:52:41.602451100Z</date>
-  <millis>1669632761602</millis>
-  <nanos>451100</nanos>
+  <date>2022-11-28T10:53:09.158122Z</date>
+  <millis>1669632789158</millis>
+  <nanos>122000</nanos>
   <sequence>9</sequence>
   <logger>be.model.be.kdg.Brommers</logger>
   <level>FINER</level>
@@ -122,9 +122,9 @@
   <message>Brommer Segway E110S toegevoegd aan treeset</message>
 </record>
 <record>
-  <date>2022-11-28T10:52:41.602945800Z</date>
-  <millis>1669632761602</millis>
-  <nanos>945800</nanos>
+  <date>2022-11-28T10:53:09.158122Z</date>
+  <millis>1669632789158</millis>
+  <nanos>122000</nanos>
   <sequence>10</sequence>
   <logger>be.model.be.kdg.Brommers</logger>
   <level>FINER</level>
@@ -134,9 +134,9 @@
   <message>Brommer Segway B110S toegevoegd aan treeset</message>
 </record>
 <record>
-  <date>2022-11-28T10:52:41.603450Z</date>
-  <millis>1669632761603</millis>
-  <nanos>450000</nanos>
+  <date>2022-11-28T10:53:09.158630Z</date>
+  <millis>1669632789158</millis>
+  <nanos>630000</nanos>
   <sequence>11</sequence>
   <logger>be.model.be.kdg.Brommers</logger>
   <level>FINER</level>
@@ -146,9 +146,9 @@
   <message>Brommer Brekr Model B toegevoegd aan treeset</message>
 </record>
 <record>
-  <date>2022-11-28T10:52:41.604456600Z</date>
-  <millis>1669632761604</millis>
-  <nanos>456600</nanos>
+  <date>2022-11-28T10:53:09.159629300Z</date>
+  <millis>1669632789159</millis>
+  <nanos>629300</nanos>
   <sequence>12</sequence>
   <logger>be.model.be.kdg.Brommers</logger>
   <level>FINER</level>
@@ -158,9 +158,9 @@
   <message>Brommer Segway E110SE verwijderd uit treeset</message>
 </record>
 <record>
-  <date>2022-11-28T10:52:41.604957800Z</date>
-  <millis>1669632761604</millis>
-  <nanos>957800</nanos>
+  <date>2022-11-28T10:53:09.160129900Z</date>
+  <millis>1669632789160</millis>
+  <nanos>129900</nanos>
   <sequence>13</sequence>
   <logger>be.model.be.kdg.Brommers</logger>
   <level>FINER</level>
