@@ -102,7 +102,17 @@ public class Kollections {
     }
 
     private static <T extends Comparable<T>> int binarySearch(List<T> sortedList, T element, int from, int to) {
-        //TODO: implement this method!
+        if (to >= from) {
+            int mid = (from + to) / 2;
+            if (sortedList.get(mid) == element)
+                return mid;
+            else if (sortedList.get(mid).compareTo(element) > 0)
+                // Continue searching in the first half
+                return binarySearch(sortedList, element, from, mid - 1);
+            else
+                // Continue searching in the last half
+                return binarySearch(sortedList, element, mid + 1, to);
+        }
         return -1;
     }
 }

@@ -3,17 +3,13 @@ import be.kdg.kollections.List;
 import be.kdg.model.Brommer;
 import be.kdg.model.BrommerFactory;
 
-import java.util.stream.Stream;
-
 public class Demo_8 {
     public static void main(String[] args) {
         // 1. Test the randomlist function
-        /*
         List<Brommer> brommers = PerformanceTester.randomList(30);
 
         // Print all elements
-        printList(brommers)
-        */
+        printList(brommers);
 
 
         // 2. Compare performance between ArrayList and LinkedList
@@ -48,14 +44,32 @@ public class Demo_8 {
         PerformanceTester.testMergeSort();*/
 
         // 6. Test compareCouters for quickSort
-        System.out.println("QuickSort");
+        /*System.out.println("QuickSort");
         for (int n = 1000; n < 20000; n += 1000) {
             Brommer.compareCounter = 0;
             List<Brommer> brommers = PerformanceTester.randomList(n);
             Kollections.quickSort(brommers);
 
             System.out.println(n + ";" + Brommer.compareCounter);
-        }
+        }*/
+
+        // 7. Searching
+        List<Brommer> brommers2 = PerformanceTester.randomList(30);
+        Kollections.mergeSort(brommers2);
+
+        // Search for a specific element
+        Brommer b = brommers2.get(10);
+
+        // Search for an unexisting element
+        Brommer b2 = BrommerFactory.newRandomBrommer();
+
+        // Run the searches
+        System.out.println("Index of existing brommer: " + Kollections.lineairSearch(brommers2, b));
+        System.out.println("Index of existing brommer: " + Kollections.binarySearch(brommers2, b));
+
+        System.out.println("Index of non existing brommer: " + Kollections.lineairSearch(brommers2, b2));
+        System.out.println("Index of non existing brommer: " + Kollections.binarySearch(brommers2, b2));
+
 
     }
 
