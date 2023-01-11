@@ -1,4 +1,6 @@
-package be.kdg.kollections;
+package be.kdg.kollections.lists;
+
+import be.kdg.kollections.Kollections;
 
 public class ArrayList<E> implements List<E> {
     private static final int INITIAL_CAPACITY = 10;
@@ -7,9 +9,13 @@ public class ArrayList<E> implements List<E> {
     private int currentCapacity;
 
     public ArrayList() {
-        elements = new Object[INITIAL_CAPACITY];
-        size = 0;
-        currentCapacity = INITIAL_CAPACITY;
+        this(INITIAL_CAPACITY);
+    }
+
+    public ArrayList(int size) {
+        elements = new Object[size];
+        this.size = 0;
+        currentCapacity = size;
     }
 
     private void expand() {
@@ -52,6 +58,21 @@ public class ArrayList<E> implements List<E> {
     }
 
     @Override
+    public boolean contains(E element) {
+        return Kollections.lineairSearch(this, element) != -1;
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public E get(int index) {
+        if (index >= this.size || index < 0) {
+            throw new IndexOutOfBoundsException("index: " + index + ", size: " + size);
+        }
+
+        return (E) elements[index];
+    }
+
+    @Override
     public void set(int index, E element) {
         if (index > this.size || index < 0) {
             throw new IndexOutOfBoundsException("index: " + index + ", size: " + size);
@@ -82,12 +103,17 @@ public class ArrayList<E> implements List<E> {
     }
 
     @Override
-    @SuppressWarnings("unchecked")
-    public E get(int index) {
-        if (index >= this.size || index < 0) {
-            throw new IndexOutOfBoundsException("index: " + index + ", size: " + size);
+    public boolean remove(E element) {
+        int index = indexOf(element);
+        if (index == -1) {
+            return false;
         }
+        remove(index);
+        return true;
+    }
 
-        return (E) elements[index];
+    @Override
+    public int indexOf(E element) {
+        return Kollections.lineairSearch(this, element);
     }
 }

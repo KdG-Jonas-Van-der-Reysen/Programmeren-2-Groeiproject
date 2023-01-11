@@ -16,6 +16,7 @@ public class Brommer implements Comparable<Brommer> {
 
     // Counters
     public static int compareCounter = 0;
+    public static int equalsCounter = 0;
 
     public String getModel() {
         return model;
@@ -120,6 +121,7 @@ public class Brommer implements Comparable<Brommer> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Brommer brommer = (Brommer) o;
+        equalsCounter++;
         return getChassisNummer().equals(brommer.getChassisNummer());
     }
 

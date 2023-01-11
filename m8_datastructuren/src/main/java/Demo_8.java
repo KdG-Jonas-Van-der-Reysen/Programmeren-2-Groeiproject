@@ -1,5 +1,5 @@
 import be.kdg.kollections.Kollections;
-import be.kdg.kollections.List;
+import be.kdg.kollections.lists.List;
 import be.kdg.model.Brommer;
 import be.kdg.model.BrommerFactory;
 
@@ -54,7 +54,7 @@ public class Demo_8 {
         }*/
 
         // 7. Searching
-        List<Brommer> brommers2 = PerformanceTester.randomList(30);
+        /*List<Brommer> brommers2 = PerformanceTester.randomList(30);
         Kollections.mergeSort(brommers2);
 
         // Search for a specific element
@@ -67,9 +67,14 @@ public class Demo_8 {
         System.out.println("Index of existing brommer: " + Kollections.lineairSearch(brommers2, b));
         System.out.println("Index of existing brommer: " + Kollections.binarySearch(brommers2, b));
 
-        System.out.println("Index of non existing brommer: " + Kollections.lineairSearch(brommers2, b2));
-        System.out.println("Index of non existing brommer: " + Kollections.binarySearch(brommers2, b2));
+        System.out.println("Index of non-existing brommer: " + Kollections.lineairSearch(brommers2, b2));
+        System.out.println("Index of non-existing brommer: " + Kollections.binarySearch(brommers2, b2));*/
 
+        // 8. ListMap vs HashMap
+        PerformanceTester.compareListMapToHashMap(10000);
+
+        // 9. ArraySet vs TreeSet
+        PerformanceTester.compareArraySetToTreeSet(10000);
 
     }
 

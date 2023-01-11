@@ -1,11 +1,19 @@
 
-import be.kdg.kollections.ArrayList;
+import be.kdg.kollections.lists.ArrayList;
 import be.kdg.kollections.Kollections;
-import be.kdg.kollections.LinkedList;
-import be.kdg.kollections.List;
+import be.kdg.kollections.lists.LinkedList;
+import be.kdg.kollections.lists.List;
+import be.kdg.kollections.maps.HashMap;
+import be.kdg.kollections.maps.ListMap;
+import be.kdg.kollections.maps.Map;
+import be.kdg.kollections.sets.ArraySet;
+import be.kdg.kollections.sets.Set;
+import be.kdg.kollections.sets.TreeSet;
 import be.kdg.model.Brommer;
 import be.kdg.model.BrommerFactory;
+import be.kdg.model.BrommerKlasse;
 
+import java.time.LocalDate;
 import java.util.Random;
 
 public class PerformanceTester {
@@ -52,6 +60,74 @@ public class PerformanceTester {
 
     }
 
+    public static void compareListMapToHashMap(int n) {
+        long start;
+        long duration;
+
+        Map<Brommer, String> listMap = new ListMap<>();
+        Map<Brommer, String> hashMap= new HashMap<>(n);
+
+        fillMap(listMap, n);
+        fillMap(hashMap, n);
+
+        //Listmap test
+        Brommer.equalsCounter = 0;
+        start = System.nanoTime();
+        performGetOnMap(listMap,n);
+        duration = System.nanoTime()-start;
+        System.out.printf("%nListmap: n = %5d, equalscount = %8d, nanosec = %15d",n,Brommer.equalsCounter,duration);
+
+        //Hashmap test
+        Brommer.equalsCounter = 0;
+        start = System.nanoTime();
+        performGetOnMap(hashMap, n);
+        duration = System.nanoTime()-start;
+        System.out.printf("%nHashmap: n = %5d, equalscount = %8d, nanosec = %15d",n,Brommer.equalsCounter,duration);
+
+    }
+
+    public static void compareArraySetToTreeSet(int n) {
+        long start;
+        long end;
+        Set<Brommer> arraySet = new ArraySet<>();
+        Set<Brommer> treeSet= new TreeSet<>();
+
+        // ArraySet test
+        Brommer.equalsCounter = 0;
+        Brommer.compareCounter = 0;
+        start = System.nanoTime();
+        new Random().ints(n).forEach(i -> arraySet.add(BrommerFactory.newRandomBrommer()));
+        end = System.nanoTime();
+        System.out.printf("%nArraySet, n = %5d: equalscount : %-7d",n, Brommer.equalsCounter);
+        System.out.printf("%nArraySet, n = %5d: comparecount: %-7d",n, Brommer.compareCounter);
+        System.out.printf("%nArraySet, n = %5d: nanosec     : %-7d",n, end-start);
+
+
+        // TreeSet test
+        Brommer.equalsCounter = 0;
+        Brommer.compareCounter = 0;
+        start = System.nanoTime();
+        new Random().ints(n).forEach(i -> treeSet.add(BrommerFactory.newRandomBrommer()));
+        end = System.nanoTime();
+        System.out.printf("%nTreeSet,  n = %5d: equalscount : %-7d",n, Brommer.equalsCounter);
+        System.out.printf("%nTreeSet,  n = %5d: comparecount: %-7d",n, Brommer.compareCounter);
+        System.out.printf("%nTreeSet,  n = %5d: nanosec     : %-7d",n, end-start);
+    }
+
+    private static void performGetOnMap(Map<Brommer, String> map, int n) {
+        for (int i = 0; i< n; i++) {
+            map.get(BrommerFactory.newFilledBrommer(
+                    "Segway",
+                    "IKBENEENBROMMERMETNUMMER" + i
+                    , 9103,
+                    20,
+                    BrommerKlasse.A,
+                    LocalDate.now().minusYears(50),
+                    LocalDate.now().minusDays(20)
+            ));
+        }
+    }
+
     public static void testSelectionSort() {
         for (int n = 1000; n < 3000; n += 1000) {
             Brommer.compareCounter = 0;
@@ -70,6 +146,21 @@ public class PerformanceTester {
             Kollections.mergeSort(brommers);
 
             System.out.println(n + ";" + Brommer.compareCounter);
+        }
+    }
+
+    private static void fillMap(Map<Brommer, String> map, int n) {
+        for (int i = 0; i < n; i++) {
+            // model, chassisNummer, gewicht, aantalKeerOnderhoud, klasse, releaseDate, laatsteOnderhoud
+            map.put(BrommerFactory.newFilledBrommer(
+                    "Segway",
+                    "IKBENEENBROMMERMETNUMMER" + i
+                    , 9103,
+                    20,
+                    BrommerKlasse.A,
+                    LocalDate.now().minusYears(50),
+                    LocalDate.now().minusDays(20)
+            ),"Ik ben de waarde "+i);
         }
     }
 }
