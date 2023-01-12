@@ -10,5 +10,7 @@ include 'm5_logging'
 include 'm6_persistentie'
 include 'm7_xml_json'
 include 'm9_threads'
+include 'm11_old'
+include 'm10_dependency'
 include 'm10_dependency'
 

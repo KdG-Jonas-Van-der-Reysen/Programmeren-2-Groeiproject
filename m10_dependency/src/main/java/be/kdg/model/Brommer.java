@@ -25,7 +25,7 @@ public class Brommer implements Comparable<Brommer>, Serializable {
     }
 
     public Brommer(String model, int aantalKeerOnderhoud, LocalDate releaseDate) {
-        this(-1, model, "", 0, aantalKeerOnderhoud, BrommerKlasse.A, releaseDate, LocalDate.now());
+        this(-1, model, "FFFFFF", 999, aantalKeerOnderhoud, BrommerKlasse.A, releaseDate, LocalDate.now());
     }
 
     public Brommer(int id, String model, String chassisNummer, double gewicht, int aantalKeerOnderhoud, BrommerKlasse klasse, LocalDate releaseDate, LocalDate laatsteOnderhoud) {

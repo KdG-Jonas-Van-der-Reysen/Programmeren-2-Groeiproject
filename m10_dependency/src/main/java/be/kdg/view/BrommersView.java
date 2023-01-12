@@ -21,6 +21,8 @@ public class BrommersView extends BorderPane {
 
     public BrommersView() {
         logger.info("Constructing BrommersView");
+        initialiseNodes();
+        layoutNodes();
     }
 
     private void initialiseNodes() {
@@ -42,7 +44,7 @@ public class BrommersView extends BorderPane {
         BorderPane.setMargin(hBox, new Insets(10));
 
         modelInput.setPromptText("Model");
-        aantalKeerOnderhoudInput.setPromptText("Chassisnummer");
+        aantalKeerOnderhoudInput.setPromptText("Aantal keer onderhoud");
         releaseDateInput.setPromptText("Release date");
 
         TableColumn<Brommer, String> col1 = new TableColumn<>("Model");
