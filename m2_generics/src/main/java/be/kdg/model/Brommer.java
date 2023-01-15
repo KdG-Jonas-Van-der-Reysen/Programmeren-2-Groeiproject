@@ -121,6 +121,10 @@ public class Brommer implements Comparable<Brommer> {
         this.releaseDate = releaseDate;
     }
 
+    /**
+     * Geeft de datum van het laatste onderhoud van de brommer.
+     * @return De datum van het laatste onderhoud van de brommer.
+     */
     public LocalDate getLaatsteOnderhoud() {
         return laatsteOnderhoud;
     }
@@ -173,13 +177,20 @@ public class Brommer implements Comparable<Brommer> {
         return Objects.hash(getChassisNummer());
     }
 
-
+    /**
+     * @param o the object to be compared.
+     * @return a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the specified object.
+     */
     @Override
     public int compareTo(Brommer o) {
         // Vergelijk chassisnummer alfabetisch
         return this.getChassisNummer().compareTo(o.getChassisNummer());
     }
 
+    /**
+     * Geeft een string representatie van de klasse {@link Brommer Brommer}.
+     * @return Een string representatie van de klasse {@link Brommer Brommer}.
+     */
     @Override
     public String toString() {
         // Format with fixed width

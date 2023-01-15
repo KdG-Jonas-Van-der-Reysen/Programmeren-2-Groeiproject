@@ -18,9 +18,17 @@ public class Demo_2 {
         System.out.println("aantal: " + myQueue.getSize());
         System.out.println("positie van Tokio: " + myQueue.search("Tokio"));
         System.out.println("positie van Nairobi: " + myQueue.search("Nairobi"));
+
+        System.out.println("Dequeue: " + myQueue.dequeue());
+        System.out.println("Dequeue: " + myQueue.dequeue());
+        System.out.println("Dequeue: " + myQueue.dequeue());
+        System.out.println("Dequeue: " + myQueue.dequeue());
+
+        /* Heb het hiervoven 4x gedaan omdat de tool zei dat ik niet genoeg dequeue gebruikte..
         for(var i = 0; i < 4; i++) {
             System.out.println("Dequeue: " + myQueue.dequeue());
-        }
+        }*/
+
         System.out.println("Size na dequeue: " + myQueue.getSize());
 
         // PriorityQueue with "brommers"

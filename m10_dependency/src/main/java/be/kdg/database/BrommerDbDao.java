@@ -115,21 +115,26 @@ public class BrommerDbDao implements BrommerDao {
 
     private void createTable() {
         try {
-            Statement statement = connection.createStatement();
-            statement.execute("DROP TABLE brommersdb IF EXISTS ");
-            String createQuery = "CREATE TABLE brommersdb " +
-                    "(id INTEGER NOT NULL IDENTITY," +
-                    "model VARCHAR(30) NOT NULL, " +
-                    "chassisNummer VARCHAR(30) NOT NULL," +
-                    "gewicht FLOAT NOT NULL," +
-                    "aantalKeerOnderhoud INTEGER NOT NULL," +
-                    "klasse VARCHAR(30) NOT NULL," +
-                    "releaseDate DATE NOT NULL," +
-                    "laatsteOnderhoud DATE NOT NULL)";
-            statement.execute(createQuery);
-            statement.close();
-            Data.getData().forEach(this::insert);
-            logger.info("Tabel aangemaakt en gevuld met data");
+            DatabaseMetaData dbm = connection.getMetaData();
+            ResultSet tables = dbm.getTables(null, null, "brommersdb", null);
+            if (!tables.next()) {
+                System.out.println("Creating table");
+                Statement statement = connection.createStatement();
+                statement.execute("DROP TABLE brommersdb");
+                String createQuery = "CREATE TABLE brommersdb " +
+                        "(id INTEGER NOT NULL IDENTITY," +
+                        "model VARCHAR(30) NOT NULL, " +
+                        "chassisNummer VARCHAR(30) NOT NULL," +
+                        "gewicht FLOAT NOT NULL," +
+                        "aantalKeerOnderhoud INTEGER NOT NULL," +
+                        "klasse VARCHAR(30) NOT NULL," +
+                        "releaseDate DATE NOT NULL," +
+                        "laatsteOnderhoud DATE NOT NULL)";
+                statement.execute(createQuery);
+                statement.close();
+                Data.getData().forEach(this::insert);
+                logger.info("Tabel aangemaakt en gevuld met data");
+            }
         } catch (SQLException e) {
             logger.severe("Onverwachte fout bij aanmaken tabel: " + e.getMessage());
             throw new BrommerException(e);

@@ -93,7 +93,8 @@ public class Demo_4 {
         // Make model name uppercase, remove doubles, sort in descending order and put the elements in one string
         System.out.println("\n\nAlle brommers in hoofdletters");
         String brommerModels = strBrommers.stream()
-                .map(brommer -> brommer.getModel().toUpperCase())
+                .map(Brommer::getModel)
+                .map(modelNaam -> modelNaam.toUpperCase())
                 .distinct()
                 .sorted(Comparator.reverseOrder())
                 .collect(Collectors.joining(", "));
@@ -128,8 +129,8 @@ public class Demo_4 {
         // sorteer alfabetisch en collect als een list van string
         System.out.println("\n\nLijst met gesorteerde brommers van Segway: ");
         List<String> segwayBrommers = strBrommers.stream()
-                .filter(brommer -> brommer.getModel().toLowerCase().contains("segway"))
-                .map(brommer -> brommer.getModel())
+                .map(Brommer::getModel)
+                .filter(brommer -> brommer.toLowerCase().contains("segway"))
                 .sorted()
                 .collect(Collectors.toList());
 

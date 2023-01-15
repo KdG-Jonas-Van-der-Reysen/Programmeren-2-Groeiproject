@@ -14,7 +14,7 @@ public class BrommerFactory {
         return new Brommer(model, chassisNummer, gewicht, aantalKeerOnderhoud, klasse, releaseDate, laatsteOnderhoud);
     }
 
-    private static String generateRandomString(int maxWordLength, int wordCount, boolean camelCase) {
+    private static String generateString(int maxWordLength, int wordCount, boolean camelCase) {
         // 1 out of 3 chance on a vowel
         // 2 out of 3 chance on a consonant
 
@@ -60,8 +60,8 @@ public class BrommerFactory {
         // Random string generator
         String randomString = java.util.UUID.randomUUID().toString().substring(0, 8);
         return new Brommer(
-                generateRandomString(10, 1, true),
-                generateRandomString(20, 1, false),
+                generateString(10, 1, true),
+                generateString(20, 1, false),
                 generateRandomInt(100,200),
                 generateRandomInt(0, 10),
                 BrommerKlasse.values()[generateRandomInt(0,1)],
